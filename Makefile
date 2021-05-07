@@ -40,7 +40,7 @@ integration-tests: deps
 	@$(GINKGO) -r -p integration
 
 docker: 
-        mkdir -vp ~/.docker/cli-plugins/
+	mkdir -vp ~/.docker/cli-plugins/
 	curl --silent -L "https://github.com/docker/buildx/releases/download/v0.4.2/buildx-v0.4.2.linux-amd64" > ~/.docker/cli-plugins/docker-buildx
 	chmod a+x ~/.docker/cli-plugins/docker-buildx		
 	@echo ">> building docker image"
