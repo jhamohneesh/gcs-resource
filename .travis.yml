@@ -35,5 +35,5 @@ jobs:
           fi
         - docker login -u $DOCKER_LOGIN -p $DOCKER_PASSWORD
         - make install
-        - make docker DOCKER_IMAGE_NAME=$DOCKER_IMAGE_NAME DOCKER_IMAGE_TAG=$DOCKER_IMAGE_TAG 2
+        - make docker DOCKER_IMAGE_NAME=$DOCKER_IMAGE_NAME DOCKER_IMAGE_TAG=$DOCKER_IMAGE_TAG 2 > /dev/null
         - docker images
